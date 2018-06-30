@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     boolean answerFirst;
-    boolean answerSecond;
+    boolean answerSecond2;
     boolean answerThird;
     int totalScore = 0;
 
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void radioButton1(View view) {
         RadioButton secondAnswer = (RadioButton) findViewById(R.id.may);
-        answerSecond = secondAnswer.isChecked();
+        answerSecond2 = secondAnswer.isChecked();
     }
 
     public void radioButton2(View view) {
@@ -61,13 +61,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public int getTotalScore() {
-        if(answerFirst){
+        if(answerFirst && ){
             totalScore = 10;
         }
         else{
             totalScore = 0;
         }
-        if(answerSecond) {
+        if(answerSecond2) {
             totalScore =  10;
         }
         else{
