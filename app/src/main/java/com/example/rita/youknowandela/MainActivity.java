@@ -5,15 +5,24 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
     boolean answerFirst;
     boolean answerSecond2;
     boolean answerThird;
-    int totalScore = 0;
+    boolean answerFirst1;
+    boolean answerThird1;
+    boolean answerFourth;
+    boolean answerFirst2;
+    boolean answerSecond1;
+    boolean answerThird2;
+    boolean answerFourth1;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,18 +40,18 @@ public class MainActivity extends AppCompatActivity {
         CharSequence text = displayMessage(score);
         int duration = Toast.LENGTH_LONG;
 
-        Toast toast = Toast.makeText(context, text, duration);
+        Toast toast = Toast.makeText(context, getNameOfGenius()+text, duration);
         toast.show();
 
     }
     //Method to get the name of user
     //Method names begin usually with verbs
 
-    public Editable getNameOfGenius() {
+    public String getNameOfGenius() {
         EditText nameOfPerson = (EditText) findViewById(R.id.name);
         Editable name = nameOfPerson.getText();
 
-        return name;
+        return name.toString() + " ";
     }
     public void radioButton(View view) {
         RadioButton firstAnswer = (RadioButton) findViewById(R.id.brilliance);
@@ -60,26 +69,64 @@ public class MainActivity extends AppCompatActivity {
         answerThird = thirdAnswer.isChecked();
     }
 
-    public int getTotalScore() {
-        if(answerFirst && ){
-            totalScore = 10;
+    public void checkbox(View view) {
+        CheckBox firstAnswer = (CheckBox)  findViewById(R.id.jeremy);
+        answerFirst1 = firstAnswer.isChecked();
+
+        CheckBox thirdAnswer = (CheckBox)  findViewById(R.id.sass);
+        answerThird1 = thirdAnswer.isChecked();
+
+        CheckBox fourthAnswer = (CheckBox) findViewById(R.id.aboyeji);
+        answerFourth = fourthAnswer.isChecked();
+    }
+
+    public void checkbox1(View view) {
+        CheckBox firstAnswer1 = (CheckBox) findViewById(R.id.computer);
+        answerFirst2 = firstAnswer1.isChecked();
+
+        CheckBox secondAnswer1 = (CheckBox) findViewById(R.id.program);
+        answerSecond1 = secondAnswer1.isChecked();
+
+        CheckBox thirdAnswer1 = (CheckBox) findViewById(R.id.outsourcing);
+        answerThird2 = thirdAnswer1.isChecked();
+
+        CheckBox fourthAnswer1 = (CheckBox) findViewById(R.id.software);
+        answerFourth1 = fourthAnswer1.isChecked();
+    }
+
+    public int getTotalScore(){
+        int totalScore = 0;
+        if(answerFirst){
+            totalScore = 20;
         }
-        else{
-            totalScore = 0;
-        }
+//        else{
+//            totalScore = 0;
+//        }
         if(answerSecond2) {
-            totalScore =  10;
+            totalScore += 20;
+
         }
-        else{
-            totalScore = 0;
+
+        if(answerThird)  {
+            totalScore += 20;
         }
+
+        if(answerFirst1 && answerThird1 && answerFourth){
+            totalScore += 20;
+        }
+
+        if(answerFirst2 && answerSecond1 && answerThird2 && answerFourth1){
+            totalScore += 20;
+        }
+
         return totalScore;
     }
 
 
     public String displayMessage(int totalScore){
-         String message = "The total score is " + totalScore;
+         String message = "your total score is " + totalScore + "!!";
 
         return message;
     }
+
 }

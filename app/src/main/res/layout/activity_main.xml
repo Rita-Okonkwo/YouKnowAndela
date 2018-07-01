@@ -194,6 +194,7 @@
                     android:textColor="@color/colorPrimaryDark" />
 
                 <CheckBox
+                    android:id="@+id/jeremy"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
@@ -201,18 +202,22 @@
                     android:fontFamily="sans-serif"
                     android:text="Jeremy Johnson"
                     android:textAppearance="?android:textAppearanceMedium"
-                    android:textColor="@color/colorPrimaryDark" />
+                    android:textColor="@color/colorPrimaryDark"
+                    android:onClick="checkbox"/>
 
                 <CheckBox
+                    android:id="@+id/buhari"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="16dp"
                     android:fontFamily="sans-serif"
                     android:text="Mohammadu Buhari"
                     android:textAppearance="?android:textAppearanceMedium"
-                    android:textColor="@color/colorPrimaryDark" />
+                    android:textColor="@color/colorPrimaryDark"
+                    android:onClick="checkbox" />
 
                 <CheckBox
+                    android:id="@+id/sass"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
@@ -220,16 +225,19 @@
                     android:fontFamily="sans-serif"
                     android:text="Christina Sass"
                     android:textAppearance="?android:textAppearanceMedium"
-                    android:textColor="@color/colorPrimaryDark" />
+                    android:textColor="@color/colorPrimaryDark"
+                    android:onClick="checkbox" />
 
                 <CheckBox
+                    android:id="@+id/aboyeji"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="16dp"
                     android:fontFamily="sans-serif"
                     android:text="Iyinoluwa Aboyeji"
                     android:textAppearance="?android:textAppearanceMedium"
-                    android:textColor="@color/colorPrimaryDark" />
+                    android:textColor="@color/colorPrimaryDark"
+                    android:onClick="checkbox"/>
 
             </LinearLayout>
 
@@ -250,6 +258,7 @@
                     android:textColor="@color/colorPrimaryDark" />
 
                 <CheckBox
+                    android:id="@+id/computer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
@@ -257,18 +266,22 @@
                     android:fontFamily="sans-serif"
                     android:text="Computer science education"
                     android:textAppearance="?android:textAppearanceMedium"
-                    android:textColor="@color/colorPrimaryDark" />
+                    android:textColor="@color/colorPrimaryDark"
+                    android:onClick="checkbox1"/>
 
                 <CheckBox
+                    android:id="@+id/program"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="16dp"
                     android:fontFamily="sans-serif"
                     android:text="Programming"
                     android:textAppearance="?android:textAppearanceMedium"
-                    android:textColor="@color/colorPrimaryDark" />
+                    android:textColor="@color/colorPrimaryDark"
+                    android:onClick="checkbox1"/>
 
                 <CheckBox
+                    android:id="@+id/outsourcing"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
@@ -276,16 +289,19 @@
                     android:fontFamily="sans-serif"
                     android:text="Outsourcing"
                     android:textAppearance="?android:textAppearanceMedium"
-                    android:textColor="@color/colorPrimaryDark" />
+                    android:textColor="@color/colorPrimaryDark"
+                    android:onClick="checkbox1"/>
 
                 <CheckBox
+                    android:id="@+id/software"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="16dp"
                     android:fontFamily="sans-serif"
                     android:text="Software training"
                     android:textAppearance="?android:textAppearanceMedium"
-                    android:textColor="@color/colorPrimaryDark" />
+                    android:textColor="@color/colorPrimaryDark"
+                    android:onClick="checkbox1"/>
 
             </LinearLayout>
 
@@ -306,6 +322,7 @@
                     android:textColor="@color/colorPrimaryDark" />
 
                 <RadioGroup
+                    android:id="@+id/radioGpId"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
@@ -318,7 +335,8 @@
                         android:fontFamily="sans-serif"
                         android:text="New York City"
                         android:textAppearance="?android:textAppearanceMedium"
-                        android:textColor="@color/colorPrimaryDark" />
+                        android:textColor="@color/colorPrimaryDark"
+                        android:onClick="radioButton2"/>
 
                     <RadioButton
                         android:layout_width="match_parent"
